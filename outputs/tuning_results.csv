@@ -1,0 +1,9 @@
+Experiment,Best_Params,CV_Best_F1,Test_F1
+KNN-Flow_A,"{'clf__n_neighbors': 5, 'clf__weights': 'uniform'}",0.7697,0.821
+NaiveBayes-Flow_A,{'clf__var_smoothing': 1e-09},0.7786,0.7986
+DecisionTree-Flow_A,"{'clf__max_depth': 5, 'clf__min_samples_split': 2}",0.8308,0.8645
+RandomForest-Flow_A,"{'clf__max_depth': None, 'clf__n_estimators': 200}",0.8668,0.9052
+KNN-Flow_B,"{'clf__n_neighbors': 11, 'clf__weights': 'distance'}",0.7828,0.8
+NaiveBayes-Flow_B,{'clf__var_smoothing': 1e-09},0.8044,0.8453
+DecisionTree-Flow_B,"{'clf__max_depth': 5, 'clf__min_samples_split': 2}",0.8384,0.8877
+RandomForest-Flow_B,"{'clf__max_depth': 10, 'clf__n_estimators': 200}",0.8709,0.9055

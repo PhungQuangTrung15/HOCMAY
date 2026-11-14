@@ -1,0 +1,9 @@
+Model,Flow,Accuracy,Precision,Recall,F1_Score,ROC_AUC
+RandomForest,Flow_B,0.927,0.917,0.8944,0.9055,0.9714
+RandomForest,Flow_A,0.927,0.92,0.8908,0.9052,0.9714
+DecisionTree,Flow_B,0.9132,0.8989,0.8768,0.8877,0.9559
+DecisionTree,Flow_A,0.8981,0.9008,0.831,0.8645,0.9281
+NaiveBayes,Flow_B,0.8815,0.864,0.8275,0.8453,0.9251
+KNN,Flow_A,0.8733,0.9174,0.743,0.821,0.9076
+KNN,Flow_B,0.8623,0.9259,0.7042,0.8,0.9289
+NaiveBayes,Flow_A,0.8457,0.8162,0.7817,0.7986,0.9103

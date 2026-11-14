@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard Dự Đoán Bỏ Học</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Dashboard Dự Đoán Nguy Cơ Bỏ Học</h1>
+        <button id="themeToggle" title="Đổi giao diện Sáng/Tối">🌙</button>
+    </header>
+
+    <main>
+        <div class="kpi-grid">
+            <div class="card">
+                <h3>Tổng sinh viên</h3>
+                <p id="kpiTotal">--</p>
+            </div>
+            <div class="card">
+                <h3>Tỷ lệ bỏ học</h3>
+                <p id="kpiRate">--%</p>
+            </div>
+            <div class="card">
+                <h3>Mô hình tốt nhất</h3>
+                <p id="kpiModel">--</p>
+            </div>
+        </div>
+
+        <div class="charts-grid">
+            <section class="card">
+                <h2>Đường cong ROC-AUC</h2>
+                <canvas id="rocChart"></canvas>
+            </section>
+            <section class="card">
+                <h2>Ma trận nhầm lẫn (Confusion Matrix)</h2>
+                <canvas id="confMatrix"></canvas>
+            </section>
+            <section class="card">
+                <h2>Top 5 đặc trưng quan trọng</h2>
+                <canvas id="featImpChart"></canvas>
+            </section>
+        </div>
+
+        <section class="card predict-box">
+            <h2>Dự đoán nhanh rủi ro sinh viên</h2>
+            <form id="predictForm">
+                <label>Tín chỉ đạt kỳ 1: <input type="number" id="sem1Approved" value="5" min="0" max="20" /></label>
+                <label>Tín chỉ đạt kỳ 2: <input type="number" id="sem2Approved" value="5" min="0" max="20" /></label>
+                <label>Học phí đúng hạn:
+                    <select id="tuitionUpToDate">
+                        <option value="1" selected>Có (1)</option>
+                        <option value="0">Không (0)</option>
+                    </select>
+                </label>
+                <button type="submit">Dự đoán</button>
+            </form>
+            <div id="predictResult"></div>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
